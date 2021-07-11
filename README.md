@@ -11,7 +11,6 @@ Clone this repo contents into ~/lab07_ws/src
  
   `git clone git@github.com:UNSW-MTRN4230-T2-2021/lab07_demo.git .`
  
-
  Then build the necessary executables
  
    `catkin_make`
@@ -29,7 +28,7 @@ Clone this repo contents into ~/lab07_ws/src
    `roslaunch thresholding thresholding_py.launch`
 
 ## Gazebo + ROS + Camera feed
-*Ensure you have completed the steps above (for either C++ or Python)*
+*Ensure you have completed the steps above for C++*
 
 - Start the gazebo ROS node (C++ only from this point on)
 
@@ -37,10 +36,15 @@ Clone this repo contents into ~/lab07_ws/src
   
   Gazebo should open up with the ur5e arm and a small 'box' camera above
   
-- Start the image publisher/subscriber node
+- In a new tab start the image publisher/subscriber node (you will need to `source` first)
 
   `roslaunch img_sub img_sub_cpp.launch`
   
   A new window should appear with the camera feed and a red circle drawn on it
   
+  
+ ## Fiducial (ArUco Marker) Detection
+  To start the node (which simply executes then waits for keypress to exit)
+  
+   `roslaunch aruco_detection aruco_detection.launch`
   
