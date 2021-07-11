@@ -1,0 +1,9 @@
+<launch>
+  <node
+    pkg="thresholding"
+    type="thresholding.py"
+    name="thresholding"
+    output="screen"
+  />
+
+</launch> 
