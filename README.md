@@ -5,13 +5,15 @@ First create the new catkin workspace for this week:
 
   `mkdir -p ~/lab07_ws/src`
 
-  `cd ~/lab07_ws`
+  `cd ~/lab07_ws/src`
 
-  `catkin_make`
-
- Clone this repo into lab07_ws
+Clone this repo contents into ~/lab07_ws/src
  
+  `git clone git@github.com:UNSW-MTRN4230-T2-2021/lab07_demo.git .`
+ 
+
  Then build the necessary executables
+ 
    `catkin_make`
    
 - To use C++:
