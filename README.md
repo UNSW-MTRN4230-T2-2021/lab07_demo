@@ -22,8 +22,9 @@ Symbolically link the repo into the lab workspace
 
   ```
   ln -s ~/lab_demo_repos/lab07_demo ~/lab_workspaces/lab07_ws/src
-  cd ~/lab_workspaces/lab07_ws/ # navigate back to the workspace, there should be a link in the /src directory now
+  cd ~/lab_workspaces/lab07_ws/
   ```
+*If you look in the ~/lab_workspaces/lab07_ws/src directory, you will find the repo is now symbolically linked into the workspace*
 
 Then build the necessary executables
    
