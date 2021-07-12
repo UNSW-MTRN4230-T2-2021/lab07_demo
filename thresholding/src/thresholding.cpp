@@ -2,7 +2,7 @@
 #include "opencv2/imgcodecs.hpp"
 #include "opencv2/highgui.hpp"
 #include <iostream>
-using namespace cv;
+
 
 int threshold_value = 0;
 int threshold_type = 3;
@@ -10,38 +10,41 @@ int const max_value = 255;
 int const max_type = 4;
 int const max_binary_value = 255;
 
-Mat src, src_gray, dst;
-const char* window_name = "Threshold Demo";
-const char* trackbar_type = "Type: \n 0: Binary \n 1: Binary Inverted \n 2: Truncate \n 3: To Zero \n 4: To Zero Inverted";
-const char* trackbar_value = "Value";
+cv::Mat src, src_gray, dst;
+std::string window_name("Threshold Demo");
+std::string trackbar_type("Type: \n 0: Binary \n 1: Binary Inverted \n 2: Truncate \n 3: To Zero \n 4: To Zero Inverted");
+std::string trackbar_value("Value");
 
-static void Threshold_Demo( int, void* ) {
-    /* 0: Binary
+// callback function for the slider. It requries signature of int, void* even if these are unused
+static void threshold_demo( int trackbarPos, void* userData ) {
+    /* 
+     Thresholding types:
+     0: Binary
      1: Binary Inverted
      2: Threshold Truncated
      3: Threshold to Zero
      4: Threshold to Zero Inverted
     */
-    threshold( src_gray, dst, threshold_value, max_binary_value, threshold_type );
-    imshow( window_name, dst );
+    cv::threshold( src_gray, dst, threshold_value, max_binary_value, threshold_type );
+    cv::imshow( window_name, dst );
 }
 int main( int argc, char** argv ) {
-    String imageName("/home/mtrn4230/lab07_ws/src/thresholding/src/coins.jpeg"); // by default
+    std::string imageName("/home/mtrn4230/lab07_ws/src/thresholding/src/coins.jpeg"); // by default
 
-    src = imread(imageName, IMREAD_COLOR ); // Load an image
+    src = cv::imread(imageName, cv::IMREAD_COLOR ); // Load an image
     if (src.empty()) {
         std::cout << "Cannot read the image: " << imageName << std::endl;
         return -1;
     }
-    cvtColor( src, src_gray, COLOR_BGR2GRAY ); // Convert the image to Gray
-    namedWindow( window_name, WINDOW_AUTOSIZE ); // Create a window to display results
-    createTrackbar( trackbar_type,
+    cv::cvtColor( src, src_gray, cv::COLOR_BGR2GRAY ); // Convert the image to Gray
+    cv::namedWindow( window_name, cv::WINDOW_AUTOSIZE ); // Create a window to display results
+    cv::createTrackbar( trackbar_type,
                     window_name, &threshold_type,
-                    max_type, Threshold_Demo ); // Create a Trackbar to choose type of Threshold
-    createTrackbar( trackbar_value,
+                    max_type, threshold_demo ); // Create a Trackbar to choose type of Threshold
+   cv:: createTrackbar( trackbar_value,
                     window_name, &threshold_value,
-                    max_value, Threshold_Demo ); // Create a Trackbar to choose Threshold value
-    Threshold_Demo( 0, 0 ); // Call the function to initialize
-    waitKey();
+                    max_value, threshold_demo ); // Create a Trackbar to choose Threshold value
+    threshold_demo( 0, 0 ); // Call the function to initialize
+    cv::waitKey();
     return 0;
 }

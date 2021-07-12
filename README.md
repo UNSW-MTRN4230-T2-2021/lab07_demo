@@ -3,48 +3,54 @@
 ## Basic image processing task
 First create the new catkin workspace for this week:
 
-  `mkdir -p ~/lab07_ws/src`
+  ```
+  mkdir -p ~/lab_workspaces/lab07_ws/src
+  ```
 
-  `cd ~/lab07_ws/src`
+Create the repo directory if not already created
 
-Clone this repo contents into ~/lab07_ws/src
+  ```
+  mkdir -p ~/lab_demo_repos/
+  cd ~/lab_demo_repos/
+  ```
+
+Clone this repo into ~/lab_demo_repos/
  
-  `git clone git@github.com:UNSW-MTRN4230-T2-2021/lab07_demo.git .`
+  `git clone git@github.com:UNSW-MTRN4230-T2-2021/lab07_demo.git`
  
- Then build the necessary executables
- 
-   `catkin_make`
+Symbolically link the repo into the lab workspace
+
+  ```
+  ln -s ~/lab_demo_repos/lab07_demo ~/lab_workspaces/lab07_ws/src
+  cd ~/lab_workspaces/lab07_ws/ # navigate back to the workspace, there should be a link in the /src directory now
+  ```
+
+Then build the necessary executables
    
 - To use C++:
 
-    `source  ~/lab07_ws/devel/setup.bash`
-   
-    `roslaunch thresholding thresholding_cpp.launch`
+  ```
+  catkin_make
+  source  devel/setup.bash
+  roslaunch thresholding thresholding_cpp.launch
+  ```
 
-- To use Python, no compilation needed:
+- To use Python:
 
-   `source  ~/lab07_ws/devel/setup.bash`
+  ```
+  catkin_make
+  source  devel/setup.bash
+  roslaunch thresholding thresholding_py.launch
+  ```
 
-   `roslaunch thresholding thresholding_py.launch`
 
-## Gazebo + ROS + Camera feed
-*Ensure you have completed the steps above for C++*
+ ## Post lab extra: Fiducial (ArUco Marker) Detection
 
-- Start the gazebo ROS node (C++ only from this point on)
-
-  `roslaunch ur_gazebo lab7.launch`
-  
-  Gazebo should open up with the ur5e arm and a small 'box' camera above
-  
-- In a new tab start the image publisher/subscriber node (you will need to `source` first)
-
-  `roslaunch img_sub img_sub_cpp.launch`
-  
-  A new window should appear with the camera feed and a red circle drawn on it
-  
-  
- ## Fiducial (ArUco Marker) Detection
   To start the node (which simply executes then waits for keypress to exit)
-  
-   `roslaunch aruco_detection aruco_detection.launch`
-  
+  ``` 
+  cd ~/lab_workspaces/lab07_ws/
+  catkin_make
+  source devel/setup.bash
+  roslaunch aruco_detection aruco_detection.launch
+  ```
+
