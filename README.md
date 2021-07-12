@@ -45,21 +45,21 @@ Then build the necessary executables
   ```
 
  ## Examples of image processing methods
- ### Opening an image from file
- ### Reading an image from a rostopic
- ### Displaying an image
+ ### [Opening an image from file](https://learnopencv.com/read-an-image-in-opencv-python-cpp/)
+ ### [Reading an image from a rostopic](https://automaticaddison.com/working-with-ros-and-opencv-in-ros-noetic/)
+ ### [Displaying an image](https://docs.opencv.org/master/db/deb/tutorial_display_image.html)
  ### Colour space conversion
  #### RGB --> HSV
  #### HSV --> RGB
  #### RGB --> LAB
  #### RGB --> Grayscale
- ### Thresholding
+ ### [Thresholding](https://learnopencv.com/opencv-threshold-python-cpp/)
  ### Morphology
  #### Erosion
  #### Dilation
  #### Opening
  #### Closing
- ### Region properties
+ ### Region properties - [Centroids](https://learnopencv.com/find-center-of-blob-centroid-using-opencv-cpp-python/)
  ### Brightness adjustment
  ### Histogram equalisation
  ### Sharpen / blur
