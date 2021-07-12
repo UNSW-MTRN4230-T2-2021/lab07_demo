@@ -43,6 +43,32 @@ Then build the necessary executables
   roslaunch thresholding thresholding_py.launch
   ```
 
+ ## Examples of image processing methods
+ ### Opening an image from file
+ ### Reading an image from a rostopic
+ ### Displaying an image
+ ### Colour space conversion
+ #### RGB --> HSV
+ #### HSV --> RGB
+ #### RGB --> LAB
+ #### RGB --> Grayscale
+ ### Thresholding
+ ### Morphology
+ #### Erosion
+ #### Dilation
+ #### Opening
+ #### Closing
+ ### Region properties
+ ### Brightness adjustment
+ ### Histogram equalisation
+ ### Sharpen / blur
+ ### Sobel edge
+ ### Corner detection: FAST
+ ### Detectors: SURF
+ ### Descriptors
+ #### SIFT
+ #### ORB
+ 
 
  ## Post lab extra: Fiducial (ArUco Marker) Detection
 
