@@ -31,7 +31,7 @@ Symbolically link the repo into the lab workspace
   ```
 *If you look in the ~/lab_workspaces/lab07_ws/src directory, you will find the repo is now symbolically linked into the workspace*
 
-Then create and source the necessary executables
+Then create and source the necessary files
  ```
   catkin_make
   source  devel/setup.bash
@@ -78,7 +78,7 @@ Then create and source the necessary executables
  
 
  ## Post lab extra: Fiducial (ArUco Marker) Detection
-
+  [Tutorial on ArUco Markers](https://docs.opencv.org/master/d5/dae/tutorial_aruco_detection.html)
   To start the node (which simply executes then waits for keypress to exit)
   ``` 
   cd ~/lab_workspaces/lab07_ws/
