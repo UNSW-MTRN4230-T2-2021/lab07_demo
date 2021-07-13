@@ -31,21 +31,22 @@ Symbolically link the repo into the lab workspace
   ```
 *If you look in the ~/lab_workspaces/lab07_ws/src directory, you will find the repo is now symbolically linked into the workspace*
 
-Then build the necessary executables
+Then create and source the necessary executables
+ ```
+  catkin_make
+  source  devel/setup.bash
+  ```
+
    
 - To use C++:
 
   ```
-  catkin_make
-  source  devel/setup.bash
   roslaunch thresholding thresholding_cpp.launch
   ```
 
 - To use Python:
 
   ```
-  catkin_make
-  source  devel/setup.bash
   roslaunch thresholding thresholding_py.launch
   ```
 
