@@ -15,7 +15,7 @@ int main( int argc, char** argv ) {
     // The ids of the detected markers are stored in a vector
     std::vector<int> markerIds;           
 
-    std::string imageName("/home/mtrn4230/lab07_ws/src/aruco_detection/src/aruco1.jpg");
+    std::string imageName("/home/mtrn4230/lab_demo_repos/lab07_demo/aruco_detection/src/aruco1.jpg");
     cv::Mat src = cv::imread(imageName, cv::IMREAD_COLOR ); // Load an image
 
     // Detect the markers in the image

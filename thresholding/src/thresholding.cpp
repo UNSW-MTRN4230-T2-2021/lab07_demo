@@ -29,7 +29,7 @@ static void threshold_demo( int trackbarPos, void* userData ) {
     cv::imshow( window_name, dst );
 }
 int main( int argc, char** argv ) {
-    std::string imageName("/home/mtrn4230/lab07_ws/src/thresholding/src/coins.jpeg"); // by default
+    std::string imageName("/home/mtrn4230/lab_demo_repos/lab07_demo/thresholding/src/coins.jpeg");
 
     src = cv::imread(imageName, cv::IMREAD_COLOR ); // Load an image
     if (src.empty()) {
