@@ -6,6 +6,12 @@
 
 NB: If you haven't already, install the new VM.
 
+Take a moment to familarise yourself with symbolic links (symlinks):
+
+https://www.digitalocean.com/community/tutorials/workflow-symbolic-links
+
+https://linuxhandbook.com/symbolic-link-linux/
+
 First create the new catkin workspace for this week:
 
   ```
