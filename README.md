@@ -23,10 +23,11 @@ Clone this repo into ~/lab_demo_repos/
  
   `git clone git@github.com:UNSW-MTRN4230-T2-2021/lab07_demo.git`
  
-Symbolically link the repo into the lab workspace
+Symbolically link the two packages from the repo into the lab workspace
 
   ```
-  ln -s ~/lab_demo_repos/lab07_demo ~/lab_workspaces/lab07_ws/src
+  ln -s ~/lab_demo_repos/lab07_demo/thresholding ~/lab_workspaces/lab07_ws/src
+  ln -s ~/lab_demo_repos/lab07_demo/aruco_detection ~/lab_workspaces/lab07_ws/src
   cd ~/lab_workspaces/lab07_ws/
   ```
 *If you look in the ~/lab_workspaces/lab07_ws/src directory, you will find the repo is now symbolically linked into the workspace*
