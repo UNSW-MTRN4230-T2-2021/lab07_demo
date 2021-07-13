@@ -1,0 +1,9 @@
+<launch>
+  <node
+    pkg="thresholding"
+    type="thresholding"
+    name="thresholding"
+    output="screen"
+  />
+
+</launch> 

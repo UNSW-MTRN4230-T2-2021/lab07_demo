@@ -1,0 +1,9 @@
+<launch>
+  <node
+    pkg="aruco_detection"
+    type="aruco_detection"
+    name="aruco_detection"
+    output="screen"
+  />
+
+</launch> 
