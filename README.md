@@ -1,6 +1,11 @@
 # Lab07
 
 ## Basic image processing task
+
+### Setup
+
+NB: If you haven't already, install the new VM.
+
 First create the new catkin workspace for this week:
 
   ```
@@ -80,4 +85,3 @@ Then build the necessary executables
   source devel/setup.bash
   roslaunch aruco_detection aruco_detection.launch
   ```
-
