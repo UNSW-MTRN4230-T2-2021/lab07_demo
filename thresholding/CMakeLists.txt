@@ -5,8 +5,10 @@ find_package(catkin REQUIRED COMPONENTS
   cv_bridge
   roscpp
   rospy
-  OpenCV
 )
+
+find_package(OpenCV)
+
 catkin_package()
 
 include_directories(
